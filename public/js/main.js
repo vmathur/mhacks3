@@ -32,13 +32,12 @@ $(function() {
 
 });
     
-    //this is code for getting data from the database
-    //
-    // $.get("http://localhost:3000/data",function(data,status){
-    //   console.log("")
-    //   /*alert("Data: " + data + "\nStatus: " + status);*/
-    //   console.log(data);
-    // });
+function getUserData(){
+  $.get("http://localhost:3000/data/get/getUser",function(data,status){
+    console.log(data)
+  });
+}
+
 
 
 function postUserData() {
@@ -78,8 +77,21 @@ function addBuddy(){
 function findBuddies() {
 	// pull up existing map
   window.open("map.html","_self");
-};
+}
 
+// function showFoursquare() {
+//   var foursquareButton = ("<div id='foursquare'></div>")
+//   $('.container').append(foursquareButton);
+//   foursquareButton = $('#foursquare');
+//   foursquareButton.attr('onclick', 'authenticateFoursquare();' )
+//   $("#study").remove();
+// }
+
+
+// function authenticateFoursquare() {
+//   //window.location = ();
+//   alert('Success!');
+// }
 
 $(function() {
   $("#update").click(function(){
