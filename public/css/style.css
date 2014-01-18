@@ -5,3 +5,19 @@
 	width:88px; 
 	height:80px;
 }
+
+h1 { 
+	text-align: center;
+}
+
+.input-form {
+	text-align: center; 
+	padding: 10px 0px 0px 0px;
+}
+
+.buttons {
+	width: 15%;
+	margin:auto;
+	/*text-align: center;*/
+	padding-top: 10px;
+}
