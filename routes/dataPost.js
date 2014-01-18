@@ -2,7 +2,7 @@ exports.addUser = function(db) {
     return function(req, res) {
         
         var data = req.body.user;
-        console.log(data.name);
+        console.log(data);
 
         // Set our collection
         var collection = db.get('user');
