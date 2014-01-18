@@ -6,6 +6,10 @@
 	height:80px;
 }
 
+#menuButton {
+	float: right;
+}
+
 h1 { 
 	text-align: center;
 }
@@ -24,11 +28,6 @@ h1 {
 	margin:auto;
 	/*text-align: center;*/
 	padding-top: 10px;
-}
-
-.buttons #menuButton {
-	background: url(/public/images/menu.jpg) no-repeat;
-	float: right;
 }
 
 html, body {
