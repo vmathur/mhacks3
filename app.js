@@ -3,7 +3,8 @@ var routes  = require('./routes/index');
 var http    = require('http');
 var path    = require('path');
 var handle  = require('./routes/handle');
-var data    = require('./routes/data');
+var dataGet  = require('./routes/dataGet');
+var dataPost = require('./routes/dataPost');
 
 var mongo = require('mongodb');
 var monk = require('monk');
@@ -23,7 +24,8 @@ app.set('title', 'BuddyUp');
 
 app.get('/', routes.index);
 app.get('/update', handle.update);
-app.get('/data', data.info(db));
+app.get('/data/get', dataGet.info(db));
+//app.post('/data/post/user, data.user(db));
 
 app.listen(3000);
 console.log('Listening on port 3000');
