@@ -15,40 +15,28 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
    </head>
   <body>
-  
-<nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#" id="homebtn">Buddy Up</a>
-  </div>
-  
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li id="findtab"><a href="#">Find</a></li>
-      <li id="studytab"><a href="#">Study</a></li>      
-    </ul>
-  </div>
-</nav>
+
 
 <div class="container" id="main">
   <h1>Buddy Up</h1>
   <div id="home-image"></div>
-  <div class="input-form">
+  <div id="nameInput">
     <form name="input">
-      Name: <input type="text">
-      <input type="button"id= "study" value="Study" onclick=getUserInfo();>
+      Name: <input type="text" id="name">
+      <input type="button" id= "study" value="Study" onclick=getUserInfo();>
       <input type="button" id="find" value="Find" onclick=findUsers();>
     </form></div>
 
 </div>
-    
+
+    <div id='studyingInput' style='visibility:hidden'>
+      What are you studying? <input type='text' studying='studying'><input type="button" id="post" value="Post" onclick=addBuddy();>
+    </div>
+    <div id='findInput' style='visibility:hidden'>
+      For: <input type='text' studying='studying'><input type="button" id="find" value="Find" onclick=findBuddies();>
+    </div>
+
     <br></br>
-
-
-    <div id="map-canvas"></div>
 
   
   </body>
