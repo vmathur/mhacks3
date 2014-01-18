@@ -1,16 +1,7 @@
 $(function() {
 
-  $("#findtab").click(function(){
- 		alert("You've clicked the find tab")
-  });
 
-  $("#studytab").click(function(){
- 		alert("You've clicked the studytab")
-  });
-
-  $("#postlocation").click(function(){
- 	$( "<div>What are you studying?</div>" ).appendTo("#buttons");
-  });
+  $("#postlocation").click(getUserInfo);
 
   $("#home-image").click(function(){
  	$.get("http://localhost:3000/update",function(data,status){
@@ -21,5 +12,12 @@ $(function() {
   });
 
 });
+
+function getUserInfo() {
+	var studying = $("<div class='input-form'>What are you studying: <input type='text' studying='studying'></div>");
+	studying.attr('id', 'studyingInfo')
+	studying.appendTo(".container");
+
+}
 
 
