@@ -31,18 +31,15 @@ h1 {
 }
 
 html, body {
+	width: 100%;
         height: 100%;
         margin: 0px;
         padding: 0px
-}
+	overflow: hidden;
+      }
 
 #map-canvas {
     height: 500px;
     margin: 20px;
     padding: 0px
-}
-
-#foursquare {
-	height: 30px;
-	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/connect-white.png?raw=true") no-repeat center ;
-}
+      }

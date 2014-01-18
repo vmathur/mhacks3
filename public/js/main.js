@@ -98,7 +98,7 @@ function findBuddies() {
 //   alert('Success!');
 // }
 function openMenu(){
-  
+  $('#menu').collapse('hide');
 }
 
 
