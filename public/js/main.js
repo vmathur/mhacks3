@@ -24,14 +24,28 @@ $(function() {
 });
 
 function getUserInfo() {
-	var studying = $("<div class='input-form'>What are you studying: <input type='text' studying='studying'></div>");
+  var name = $("#name").val();
+  currentUser = new User(name);
+	var studying = $("<form class='input-form'>What are you studying: <input type='text' id='studying'><input type='button' value='Submit' onclick='getStudying();'></form>");
 	studying.attr('id', 'studyingInfo')
 	studying.appendTo(".container");
 }
 
 function findUsers() {
+  currentUser = new User(name);
 	console.log('Find Users');
 }
 
+function User(name, location) {
+  this.name = name;
+  this.location = location;
+
+  return this;
+}
+
+function getStudying() {
+  var studying = $("#studying").val();
+  currentUser.studying = studying;
+}
 
 
