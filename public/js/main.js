@@ -13,11 +13,27 @@ function initialize() {
       mapOptions);
 
   getLocation();
+  newmarkers(42.3354,-83.0428, "Bob is here");
  }
 
 google.maps.event.addDomListener(window, 'load', initialize);
 });
-    
+
+$(function() {
+  $("#home-image").click(function(){
+    getUserStudying('Science', function(data){
+      //do something meaningul with data
+      console.log(data);
+    });
+  });
+});
+ 
+function getUserStudying(studying, callback){
+  $.get("http://localhost:3000/data/get/getUserWith/"+studying,function(data,status){
+    callback(data);
+  });
+}
+
 function getUserData(){
   $.get("http://localhost:3000/data/get/getUser",function(data,status){
     console.log(data)
@@ -36,14 +52,14 @@ function showPosition(position) {
   var myLat = position.coords.latitude;
   var myLong = position.coords.longitude; 
   var LatLng = new google.maps.LatLng(myLat, myLong);
-  createMarker(LatLng);
+  createMarker(LatLng,"You are here");
 }
 
-function createMarker (latlng) {
+function createMarker (latlng, Message) {
   var marker = new google.maps.Marker({
     position: latlng,
     map: map, 
-    title: "Location"
+    title: Message
   })
 }
 
@@ -80,6 +96,13 @@ function addBuddy(){
 function findBuddies() {
 	// pull up existing map
   window.open("map.html","_self");
+}
+
+
+function newmarkers (LAT,LONG,Message) {
+var LatLng = new google.maps.LatLng(LAT,LONG);
+createMarker(LatLng, Message);
+
 }
 
 //FUNCTIONS NOT BEING USED

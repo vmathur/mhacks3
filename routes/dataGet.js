@@ -6,3 +6,14 @@ exports.getUser = function(db) {
     	});
     };
 };
+
+exports.getUserWith = function(db) {
+    return function(req, res) {
+    	var topic = req.params.stuff;
+    	var collection = db.get('user');
+
+    	collection.find({studying: topic},function(e,docs){
+    		res.send('data',docs)
+    	});
+    };
+};
