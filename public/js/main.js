@@ -52,8 +52,10 @@ function getUserInfo() {
 }
 
 function findUsers() {
+  var name = $("#name").val();
   currentUser = new User(name);
-	console.log('Find Users');
+  document.getElementById("studyingInput").style.visibility="hidden";
+  document.getElementById("findInput").style.visibility="visible";
 }
 
 function User(name, location) {
@@ -68,17 +70,15 @@ function getStudying() {
   currentUser.studying = studying;
 }
 
-function findUsers() {
-	document.getElementById("studyingInput").style.visibility="hidden";
-	document.getElementById("findInput").style.visibility="visible";
-}
-
 function addBuddy(){
-	// pull up existing map, add new buddy!
+	// pull up existing map
+  window.open("map.html","_self");
+  //add new buddy!
 }
 
-function findUsers() {
+function findBuddies() {
 	// pull up existing map
+  window.open("map.html","_self");
 };
 
 $("#findtab").click(function() {
