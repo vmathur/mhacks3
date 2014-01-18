@@ -26,15 +26,24 @@ h1 {
 	padding-top: 10px;
 }
 
+.buttons #menuButton {
+	background: url(/public/images/menu.jpg) no-repeat;
+	float: right;
+}
 
 html, body {
         height: 100%;
         margin: 0px;
         padding: 0px
-      }
+}
 
 #map-canvas {
     height: 500px;
     margin: 20px;
     padding: 0px
-      }
+}
+
+#foursquare {
+	height: 30px;
+	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/connect-white.png?raw=true") no-repeat center ;
+}

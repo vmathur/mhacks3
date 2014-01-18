@@ -53,7 +53,10 @@ function postUserData() {
     data: { 'user' : currentUser},
     success: function(data) { console.log(data) }
   });
+  foursquare = showFoursquare();
+  if (foursquare) {
     findBuddies();
+  }
 }
 
 // function findUsers() {
@@ -78,8 +81,21 @@ function addBuddy(){
 function findBuddies() {
 	// pull up existing map
   window.open("map.html","_self");
-};
+}
 
+function showFoursquare() {
+  var foursquareButton = ("<div id='foursquare'></div>")
+  $('.container').append(foursquareButton);
+  foursquareButton = $('#foursquare');
+  foursquareButton.attr('onclick', 'authenticateFoursquare();' )
+  $("#study").remove();
+}
+
+
+function authenticateFoursquare() {
+  //window.location = ();
+  alert('Success!');
+}
 
 $(function() {
   $("#update").click(function(){
