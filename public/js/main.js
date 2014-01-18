@@ -26,7 +26,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 $(function() {
   $("#home-image").click(function(){
- 	$.get("http://localhost:3000/update",function(data,status){
+ 	  $.get("http://localhost:3000/update",function(data,status){
       console.log("")
       /*alert("Data: " + data + "\nStatus: " + status);*/
       console.log(data);
@@ -34,6 +34,15 @@ $(function() {
   });
 
 });
+    
+    //this is code for getting data from the database
+    //
+    // $.get("http://localhost:3000/data",function(data,status){
+    //   console.log("")
+    //   /*alert("Data: " + data + "\nStatus: " + status);*/
+    //   console.log(data);
+    // });
+
 
 function getUserInfo() {
   var name = $("#name").val();
