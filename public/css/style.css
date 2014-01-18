@@ -22,19 +22,15 @@ h1 {
 	padding-top: 10px;
 }
 
-#studyingInfo {
-	display:inline-block;
-	width: 100%;
-	text-align: center;
 
 html, body {
-    height: 100%;
-    margin: 0px;
-    padding: 0px
-}
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
 
 #map-canvas {
-    height: 450px;
-    margin: 100px;
-    padding: 0px;
-}
+    height: 500px;
+    margin: 20px;
+    padding: 0px
+      }
