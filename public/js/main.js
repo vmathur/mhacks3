@@ -36,8 +36,30 @@ $(function() {
 });
 
 function getUserInfo() {
-	document.getElementById("findInput").style.visibility="hidden";
-	document.getElementById("studyingInput").style.visibility="visible";
+  var name = $("#name").val();
+  currentUser = new User(name);
+	var studying = $("<form class='input-form'>What are you studying: <input type='text' id='studying'><input type='button' value='Submit' onclick='getStudying();'></form>");
+	studying.attr('id', 'studyingInfo')
+	studying.appendTo(".container");
+    document.getElementById("findInput").style.visibility="hidden";
+  document.getElementById("studyingInput").style.visibility="visible";
+}
+
+function findUsers() {
+  currentUser = new User(name);
+	console.log('Find Users');
+}
+
+function User(name, location) {
+  this.name = name;
+  this.location = location;
+
+  return this;
+}
+
+function getStudying() {
+  var studying = $("#studying").val();
+  currentUser.studying = studying;
 }
 
 function findUsers() {
@@ -52,8 +74,6 @@ function addBuddy(){
 function findUsers() {
 	// pull up existing map
 };
-
-
 
 $("#findtab").click(function() {
 
