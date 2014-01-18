@@ -20,13 +20,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 $(function() {
   $("#home-image").click(function(){
-    getUserStudying('Science');
+    getUserStudying('Science', function(data){
+      //do something meaningul with data
+      console.log(data);
+    });
   });
 });
  
-function getUserStudying(studying){
+function getUserStudying(studying, callback){
   $.get("http://localhost:3000/data/get/getUserWith/"+studying,function(data,status){
-    console.log(data);
+    callback(data);
   });
 }
 
