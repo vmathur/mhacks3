@@ -32,13 +32,12 @@ $(function() {
 
 });
     
-    //this is code for getting data from the database
-    //
-    // $.get("http://localhost:3000/data",function(data,status){
-    //   console.log("")
-    //   /*alert("Data: " + data + "\nStatus: " + status);*/
-    //   console.log(data);
-    // });
+function getUserData(){
+  $.get("http://localhost:3000/data/get/getUser",function(data,status){
+    console.log(data)
+  });
+}
+
 
 
 function postUserData() {
