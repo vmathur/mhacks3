@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(function() {
+
   $("#findtab").click(function(){
  		alert("You've clicked the find tab")
   });
@@ -7,24 +8,10 @@ $(document).ready(function(){
  		alert("You've clicked the studytab")
   });
 
-  $("#Homebtn").click(function(){
- 	var f = document.createElement("form");
-	f.setAttribute('method',"post");
-	f.setAttribute('action',"submit.php");
+  $("#homebtn").click(function(){
+ 	$( "#main" ).append( document.createTextNode( "Hello" ) );
   });
 
-
-
-
-
-
 });
-
-
-
-var c = document.createElement("input");
-c.type = "checkbox";
-c.id = "checkbox1";
-c.name = "check1";
 
 
