@@ -18,33 +18,29 @@
   
 <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#" id="homebtn">Buddy Up</a>
-  </div>
-  
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li id="findtab"><a href="#">Find</a></li>
-      <li id="studytab"><a href="#">Study</a></li>      
-    </ul>
+      <a class="navbar-brand" href="/index.html" id="homebtn"><img src="https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true width="25px" height="25px"></a>
+      <a class="navbar-brand" href="/index.html" id="homebtn">Buddy Up</a>
   </div>
 </nav>
 
 <div class="container" id="main">
   <h1>Buddy Up</h1>
   <div id="home-image"></div>
-  <div class="input-form">
+  <div id="nameInput">
     <form name="input">
       Name: <input type="text">
-      <input type="button"id= "study" value="Study" onclick=getUserInfo();>
+      <input type="button" id= "study" value="Study" onclick=getUserInfo();>
       <input type="button" id="find" value="Find" onclick=findUsers();>
     </form></div>
 
 </div>
     
+    <div id='studyingInput' style='visibility:hidden'>
+      What are you studying? <input type='text' studying='studying'><input type="button" id="post" value="Post" onclick=addBuddy();>
+    </div>
+    <div id='findInput' style='visibility:hidden'>
+      For: <input type='text' studying='studying'><input type="button" id="find" value="Find" onclick=findBuddies();>
+    </div>
     <br></br>
 
 

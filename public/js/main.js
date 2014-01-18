@@ -28,14 +28,19 @@ $(function() {
 });
 
 function getUserInfo() {
-	var studying = $("<div class='input-form'>What are you studying: <input type='text' studying='studying'></div>");
-	studying.attr('id', 'studyingInfo')
-	studying.appendTo(".container");
+	document.getElementById("findInput").style.visibility="hidden";
+	document.getElementById("studyingInput").style.visibility="visible";
 }
 
 function findUsers() {
-	console.log('Find Users');
+	document.getElementById("studyingInput").style.visibility="hidden";
+	document.getElementById("findInput").style.visibility="visible";
 }
 
+function addBuddy(){
+	// pull up existing map, add new buddy!
+}
 
-
+function findBuddies(){
+	// pull up existing map
+}
