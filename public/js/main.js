@@ -53,16 +53,11 @@ function postUserData() {
     data: { 'username' : currentUser.name },
     success: function(data) { console.log(data) }
   });
-
-  document.getElementById("findInput").style.visibility="hidden";
-  document.getElementById("studyingInput").style.visibility="visible";
 }
 
 function findUsers() {
   var name = $("#name").val();
   currentUser = new User(name);
-  document.getElementById("studyingInput").style.visibility="hidden";
-  document.getElementById("findInput").style.visibility="visible";
 }
 
 function User(name, location) {

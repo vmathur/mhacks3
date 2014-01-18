@@ -10,7 +10,7 @@ h1 {
 	text-align: center;
 }
 
-#nameInput, #studyingInput, #findInput{
+#userInput, #studyingInput, #findInput{
 	text-align: center; 
 	padding: 10px 0px 0px 0px;
 }

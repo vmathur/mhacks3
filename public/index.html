@@ -19,22 +19,15 @@
 <div class="container" id="main">
   <h1>Buddy Up</h1>
   <div id="home-image"></div>
-  <div id="nameInput">
+  <div id="userInput">
     <form name="input" method="post" action="/post/user">
-      Name: <input type="text" id="name">
-      <input type="button" id= "study" value="Study" onclick=postUserData();>
-      <input type="button" id="find" value="Search" onclick=findUsers();>
+      Name: <input type="text" id="name" placeholder="username"></br>
+      What are you studying? <input type='text' id='studying' placeholder="e.g. Math"></br>
+      <input type="button" id= "study" value="Find a Buddy" onclick=postUserData();>
+
     </form></div>
 
 </div>
-
-    <div id='studyingInput' style='visibility:hidden'>
-      What are you studying? <input type='text' id='studying'><input type="button" id="post" value="Post" onclick=addBuddy();>
-    </div>
-    <div id='findInput' style='visibility:hidden'>
-      For: <input type='text' id='studying'><input type="button" id="find" value="Find" onclick=findBuddies();>
-    </div>
-
     <br></br>
 
   
