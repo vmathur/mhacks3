@@ -47,9 +47,11 @@ $(function() {
 function postUserData() {
   var name = $("#name").val();
   currentUser = new User(name);
+
   $.ajax({
     type: "POST",
     url: "http://localhost:3000/data/post/user",
+    dataType: 'json',
     data: { 'username' : currentUser.name },
     success: function(data) { console.log(data) }
   });

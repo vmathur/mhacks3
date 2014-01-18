@@ -18,6 +18,7 @@ app.configure('development', function(){
 
 app.configure(function(){
 	app.use(express.static(path.join(__dirname, 'public')));
+	app.use(express.bodyParser());
 });
 
 app.set('title', 'BuddyUp');
@@ -25,7 +26,7 @@ app.set('title', 'BuddyUp');
 app.get('/', routes.index);
 app.get('/update', handle.update);
 app.get('/data/get', dataGet.info(db));
-//app.post('/data/post/user, data.user(db));
+app.post('/data/post/user', dataPost.addUser(db));
 
 app.listen(3000);
 console.log('Listening on port 3000');
