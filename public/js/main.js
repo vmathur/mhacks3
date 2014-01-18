@@ -106,7 +106,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
   });
 
 });
->>>>>>> 729f0b413bff0c8b0ff57a6387deafae655e6da8
 
 function findBuddies(){
 	// pull up existing map
