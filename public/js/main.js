@@ -49,9 +49,11 @@ function getUserInfo() {
   currentUser = new User(name);
   $.ajax({
     type: "POST",
-    url: "http://localhost:30000/data/post/user",
-    data: currentUser
+    url: "http://localhost:3000/data/post/user",
+    data: { 'username' : currentUser.name },
+    success: function(data) { console.log(data) }
   });
+  
   document.getElementById("findInput").style.visibility="hidden";
   document.getElementById("studyingInput").style.visibility="visible";
 }
