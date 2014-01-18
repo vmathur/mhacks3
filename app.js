@@ -1,10 +1,18 @@
-var express = require('express');
+var express = require('express')
+  , routes = require('./routes')
+  , http = require('http')
+
 var app = express();
+
+app.configure('development', function(){
+  app.use(express.errorHandler());
+});
+
+app.set('title', 'Awesome Webapp');
+
 
 app.get('/', function(req, res){
   var body = 'Hello World';
-  res.setHeader('Content-Type', 'text/plain');
-  res.setHeader('Content-Length', Buffer.byteLength(body));
   res.end(body);
 });
 
