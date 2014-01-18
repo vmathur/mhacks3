@@ -23,15 +23,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 $(function() {
   $("#home-image").click(function(){
- 	  $.get("http://localhost:3000/update",function(data,status){
-      console.log("")
-      /*alert("Data: " + data + "\nStatus: " + status);*/
-      console.log(data);
-    });
+    getUserStudying('Science');
   });
-
 });
     
+
+function getUserStudying(studying){
+  $.get("http://localhost:3000/data/get/getUserWith/"+studying,function(data,status){
+    console.log(data);
+  });
+}
+
 function getUserData(){
   $.get("http://localhost:3000/data/get/getUser",function(data,status){
     console.log(data)

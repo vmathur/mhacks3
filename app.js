@@ -26,7 +26,7 @@ app.set('title', 'BuddyUp');
 app.get('/', routes.index);
 app.get('/update', handle.update);
 
-//app.get('/data/get/user', dataGet.getUserWith())
+app.get('/data/get/getUserWith/:stuff', dataGet.getUserWith(db));
 app.get('/data/get/user', dataGet.getUser(db));
 app.post('/data/post/user', dataPost.addUser(db));
 
