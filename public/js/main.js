@@ -1,5 +1,6 @@
 
 var map;
+
 $( document ).ready(function() {
 
 function initialize() {
@@ -7,29 +8,14 @@ function initialize() {
     zoom: 14,
     center: new google.maps.LatLng(42.3314, -83.0458)
   };
-  var myLatlng = new google.maps.LatLng(42.3334,-83.0458);
   
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Arthur is here'
-  });
+
+  getLocation();
  }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-});
-
-$(function() {
-  $("#home-image").click(function(){
- 	  $.get("http://localhost:3000/update",function(data,status){
-      console.log("")
-      /*alert("Data: " + data + "\nStatus: " + status);*/
-      console.log(data);
-    });
-  });
-
 });
     
     //this is code for getting data from the database
@@ -40,6 +26,47 @@ $(function() {
     //   console.log(data);
     // });
 
+// $(function() {
+//   $("#update").click(function(){
+  
+//   var myLatlng = new google.maps.LatLng(42.3354,-83.0428) 
+//   var marker = new google.maps.Marker({
+//       position: myLatlng,
+//       map: map,
+//       title: 'Josh is here'
+//   });
+ 
+// google.maps.event.addDomListener(window, 'load', initialize);
+//   });
+
+// });
+
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML="Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  var myLat = position.coords.latitude;
+  var myLong = position.coords.longitude; 
+  // x.innerHTML="Latitude: " + myLat + 
+  // "<br>Longitude: " + myLong;  
+  var LatLng = new google.maps.LatLng(myLat, myLong);
+  createMarker(LatLng);
+}
+
+function createMarker (latlng) {
+  var marker = new google.maps.Marker({
+    position: latlng,
+    map: map, 
+    title: "Location"
+  })
+}
 
 function postUserData() {
   var name = $("#name").val();
@@ -53,7 +80,8 @@ function postUserData() {
     data: { 'user' : currentUser},
     success: function(data) { console.log(data) }
   });
-    findBuddies();
+  
+  findBuddies();
 }
 
 // function findUsers() {
@@ -93,21 +121,6 @@ function findBuddies() {
 //   //window.location = ();
 //   alert('Success!');
 // }
-
-$(function() {
-  $("#update").click(function(){
- 	
- 	var myLatlng = new google.maps.LatLng(42.3354,-83.0428) 
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Josh is here'
-  });
- 
-google.maps.event.addDomListener(window, 'load', initialize);
-  });
-
-});
 
 
 
