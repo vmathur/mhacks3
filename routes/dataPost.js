@@ -1,7 +1,7 @@
 exports.addUser = function(db) {
     return function(req, res) {
         
-        var data = req.body.username;
+        var data = req.body.user;
         console.log(data);
 
         // Get our form values. These rely on the "name" attributes
