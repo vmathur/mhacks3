@@ -1,8 +1,10 @@
-
-
-
 $(document).ready(function(){
-  $("#theD").click(function(){
-    $(this).hide();
+  $("#findtab").click(function(){
+ 		alert("You've clicked the find tab")
   });
+
+  $("#studytab").click(function(){
+ 		alert("You've clicked the studytab")
+  });
+
 });
