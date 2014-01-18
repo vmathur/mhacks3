@@ -75,9 +75,6 @@ function findUsers() {
 	// pull up existing map
 };
 
-
->>>>>>> 33adbdeb005374ed2f202281d76370307120d794
-
 $("#findtab").click(function() {
 
 	alert("hi");
