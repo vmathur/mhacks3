@@ -38,10 +38,7 @@ $(function() {
 function getUserInfo() {
   var name = $("#name").val();
   currentUser = new User(name);
-	var studying = $("<form class='input-form'>What are you studying: <input type='text' id='studying'><input type='button' value='Submit' onclick='getStudying();'></form>");
-	studying.attr('id', 'studyingInfo')
-	studying.appendTo(".container");
-    document.getElementById("findInput").style.visibility="hidden";
+  document.getElementById("findInput").style.visibility="hidden";
   document.getElementById("studyingInput").style.visibility="visible";
 }
 
