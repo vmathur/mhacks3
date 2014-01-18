@@ -44,7 +44,7 @@ $(function() {
     // });
 
 
-function getUserInfo() {
+function postUserData() {
   var name = $("#name").val();
   currentUser = new User(name);
 
@@ -55,7 +55,7 @@ function getUserInfo() {
     data: { 'username' : currentUser.name },
     success: function(data) { console.log(data) }
   });
-  
+
   document.getElementById("findInput").style.visibility="hidden";
   document.getElementById("studyingInput").style.visibility="visible";
 }
