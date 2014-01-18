@@ -80,22 +80,9 @@ function findBuddies() {
   window.open("map.html","_self");
 };
 
-$("#findtab").click(function() {
-
-	alert("hi");
-  
-  /*var myLatlng = new google.maps.LatLng(42.3354,-83.0428) 
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Josh is here'
-  });
- 
-google.maps.event.addDomListener(window, 'load', initialize);*/
-});
 
 $(function() {
-  $("#findtab").click(function(){
+  $("#update").click(function(){
  	
  	var myLatlng = new google.maps.LatLng(42.3354,-83.0428) 
   var marker = new google.maps.Marker({
@@ -108,3 +95,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
   });
 
 });
+
+
+
