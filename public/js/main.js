@@ -21,9 +21,6 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 });
 
-
-
-
 $(function() {
   $("#home-image").click(function(){
  	  $.get("http://localhost:3000/update",function(data,status){
@@ -56,6 +53,7 @@ function postUserData() {
     data: { 'user' : currentUser},
     success: function(data) { console.log(data) }
   });
+    findBuddies();
 }
 
 // function findUsers() {
@@ -110,7 +108,3 @@ google.maps.event.addDomListener(window, 'load', initialize);
   });
 
 });
-
-function findBuddies(){
-	// pull up existing map
-}
