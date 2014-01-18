@@ -13,7 +13,7 @@ function initialize() {
       mapOptions);
 
   getLocation();
-  newmarkers(42.3354,-83.0428, "Bob is here");
+  createMarker(42.3354,-83.0428, "Bob is here");
  }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -51,11 +51,11 @@ function getLocation() {
 function showPosition(position) {
   var myLat = position.coords.latitude;
   var myLong = position.coords.longitude; 
-  var LatLng = new google.maps.LatLng(myLat, myLong);
-  createMarker(LatLng,"You are here");
+  createMarker(myLat, myLong, "You are here");
 }
 
-function createMarker (latlng, Message) {
+function createMarker (lat, lng, Message) {
+  var latlng = new google.maps.LatLng(lat, lng);
   var marker = new google.maps.Marker({
     position: latlng,
     map: map, 
@@ -98,12 +98,6 @@ function findBuddies() {
   window.open("map.html","_self");
 }
 
-
-function newmarkers (LAT,LONG,Message) {
-var LatLng = new google.maps.LatLng(LAT,LONG);
-createMarker(LatLng, Message);
-
-}
 
 //FUNCTIONS NOT BEING USED
 
