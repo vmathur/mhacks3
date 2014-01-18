@@ -26,6 +26,10 @@ h1 {
 	padding-top: 10px;
 }
 
+.buttons #menuButton {
+	background: url(/public/images/menu.jpg) no-repeat;
+	float: right;
+}
 
 html, body {
         height: 100%;
