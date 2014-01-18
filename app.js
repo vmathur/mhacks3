@@ -13,7 +13,7 @@ app.set('title', 'Awesome Webapp');
 
 app.get('/', function(req, res){
   var body = 'Goodbye World';
-  res.end(body);
+  res.send(body);
 });
 
 app.listen(3000);
