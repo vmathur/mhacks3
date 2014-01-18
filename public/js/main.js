@@ -24,37 +24,17 @@ function getUserData(){
   });
 }
 
-
-// $(function() {
-//   $("#update").click(function(){
-  
-//   var myLatlng = new google.maps.LatLng(42.3354,-83.0428) 
-//   var marker = new google.maps.Marker({
-//       position: myLatlng,
-//       map: map,
-//       title: 'Josh is here'
-//   });
- 
-// google.maps.event.addDomListener(window, 'load', initialize);
-//   });
-
-// });
-
-var x = document.getElementById("demo");
-
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else { 
-    x.innerHTML="Geolocation is not supported by this browser.";
+    alert("Geolocation is not supported by this browser.");
   }
 }
 
 function showPosition(position) {
   var myLat = position.coords.latitude;
   var myLong = position.coords.longitude; 
-  // x.innerHTML="Latitude: " + myLat + 
-  // "<br>Longitude: " + myLong;  
   var LatLng = new google.maps.LatLng(myLat, myLong);
   createMarker(LatLng);
 }
@@ -83,11 +63,6 @@ function postUserData() {
   findBuddies();
 }
 
-// function findUsers() {
-//   var name = $("#name").val();
-//   currentUser = new User(name);
-// }
-
 function User(name, location, studying) {
   this.name = name;
   this.location = location;
@@ -107,6 +82,8 @@ function findBuddies() {
   window.open("map.html","_self");
 }
 
+//FUNCTIONS NOT BEING USED
+
 // function showFoursquare() {
 //   var foursquareButton = ("<div id='foursquare'></div>")
 //   $('.container').append(foursquareButton);
@@ -121,5 +98,27 @@ function findBuddies() {
 //   alert('Success!');
 // }
 
+
+
+// $(function() {
+//   $("#update").click(function(){
+  
+//   var myLatlng = new google.maps.LatLng(42.3354,-83.0428) 
+//   var marker = new google.maps.Marker({
+//       position: myLatlng,
+//       map: map,
+//       title: 'Josh is here'
+//   });
+ 
+// google.maps.event.addDomListener(window, 'load', initialize);
+//   });
+
+// });
+
+
+// function findUsers() {
+//   var name = $("#name").val();
+//   currentUser = new User(name);
+// }
 
 
