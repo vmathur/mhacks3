@@ -92,6 +92,9 @@ function findBuddies() {
 //   //window.location = ();
 //   alert('Success!');
 // }
+function openMenu(){
+  
+}
 
 $(function() {
   $("#update").click(function(){
