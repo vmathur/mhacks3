@@ -10,11 +10,8 @@ app.configure('development', function(){
 
 app.set('title', 'Awesome Webapp');
 
+app.get('/', routes.index);
 
-app.get('/', function(req, res){
-  var body = 'Goodbye World';
-  res.send(body);
-});
 
 app.listen(3000);
 console.log('Listening on port 3000');
