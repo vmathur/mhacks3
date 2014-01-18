@@ -46,32 +46,29 @@ $(function() {
 
 function postUserData() {
   var name = $("#name").val();
-  currentUser = new User(name);
+  var studying = $("#studying").val();
+  currentUser = new User(name, 0, studying);
 
   $.ajax({
     type: "POST",
     url: "http://localhost:3000/data/post/user",
     dataType: 'json',
-    data: { 'username' : currentUser.name },
+    data: { 'user' : currentUser},
     success: function(data) { console.log(data) }
   });
 }
 
-function findUsers() {
-  var name = $("#name").val();
-  currentUser = new User(name);
-}
+// function findUsers() {
+//   var name = $("#name").val();
+//   currentUser = new User(name);
+// }
 
-function User(name, location) {
+function User(name, location, studying) {
   this.name = name;
   this.location = location;
+  this.studying = studying;
 
   return this;
-}
-
-function getStudying() {
-  var studying = $("#studying").val();
-  currentUser.studying = studying;
 }
 
 function addBuddy(){
