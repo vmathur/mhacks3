@@ -2,28 +2,22 @@ exports.addUser = function(db) {
     return function(req, res) {
         
         var data = req.body.user;
-        console.log(data);
-
-        // Get our form values. These rely on the "name" attributes
-        //var user = req.body;
+        console.log(data.name);
 
         // Set our collection
-        // var collection = db.get('testData');
-        // collection.insert({
-        //     "username" : userName,
-        //     "email" : userEmail
-        // }, function (err, doc) {
-        //     if (err) {
-        //         res.send("There was a problem adding the information to the database.");
-        //     }
-        //     else {
-        //         console.log(res);
-        //         // If it worked, set the header so the address bar doesn't still say /adduser
-        //         //res.location("userlist");
-        //         // And forward to success page
-        //         //res.redirect("userlist");
-        //     }
-        // });
+        var collection = db.get('user');
+        collection.insert({
+            "username" : data.name,
+            "location" : {"long":data.location, "lat":data.location},
+            "studying" : data.studying
+        }, function (err, doc) {
+            if (err) {
+                res.send("There was a problem adding the information to the database.");
+            }
+            else {
+                res.send("Data successfully entered");
+            }
+        });
 
     }
 }

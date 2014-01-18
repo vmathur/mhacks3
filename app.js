@@ -8,7 +8,7 @@ var dataPost = require('./routes/dataPost');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/mydb');
+var db = monk('localhost:27017/buddyup');
 
 var app = express();
 
