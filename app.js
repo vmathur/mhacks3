@@ -1,7 +1,8 @@
-var express = require('express')
-  , routes = require('./routes')
-  , http = require('http')
-  , path = require('path');
+var   express = require('express');
+var   routes = require('./routes/index');
+var   http = require('http');
+var   path = require('path');
+var   handle = require('./routes/handle');
 
 var app = express();
 
@@ -16,6 +17,7 @@ app.configure(function(){
 app.set('title', 'Awesome Webapp');
 
 app.get('/', routes.index);
+app.get('/update', handle.update);
 
 
 app.listen(3000);
