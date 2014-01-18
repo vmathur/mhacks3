@@ -8,8 +8,8 @@ $(function() {
  		alert("You've clicked the studytab")
   });
 
-  $("#homebtn").click(function(){
- 	$( "#main" ).append( document.createTextNode( "Hello" ) );
+  $("#postlocation").click(function(){
+ 	$( "<div>What are you studying?</div>" ).appendTo("#buttons");
   });
 
 });
