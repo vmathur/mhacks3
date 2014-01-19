@@ -24,6 +24,7 @@ app.configure(function(){
 app.set('title', 'BuddyUp');
 
 app.get('/', routes.index);
+app.get('/map',routes.map);
 app.get('/update', handle.update);
 
 app.get('/data/get/getUserWith/:stuff', dataGet.getUserWith(db));

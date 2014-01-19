@@ -72,17 +72,21 @@ function createMarker (lat, lng, Message) {
 function postUserData() {
   var name = $("#name").val();
   var studying = $("#studying").val();
-  currentUser = new User(name, 0, studying);
+  currentUser = new User(name, 100, studying);
 
   $.ajax({
     type: "POST",
     url: "http://localhost:3000/data/post/user",
     dataType: 'json',
-    data: { 'user' : currentUser},
-    success: function(data) { console.log(data) }
+    data: { 'username' : currentUser.name, 'location' : currentUser.location, 'studying' : currentUser.studying},
+    success: function(result) {
+       console.log(result);
+    },
+    error:function(){
+    }
   });
   
-  findBuddies();
+  //findBuddies();
 }
 
 function User(name, location, studying) {
@@ -100,51 +104,20 @@ function addBuddy(){
 }
 
 function findBuddies() {
+  $.get("http://localhost:3000/map",function(data,status){
+    console.log(data)
+  });
+
 	// pull up existing map
-  window.open("map.html","_self");
+  //window.open("map.html","_self");
 }
 
-
-//FUNCTIONS NOT BEING USED
-
-// function showFoursquare() {
-//   var foursquareButton = ("<div id='foursquare'></div>")
-//   $('.container').append(foursquareButton);
-//   foursquareButton = $('#foursquare');
-//   foursquareButton.attr('onclick', 'authenticateFoursquare();' )
-//   $("#study").remove();
-// }
-
-
-// function authenticateFoursquare() {
-//   //window.location = ();
-//   alert('Success!');
-// }
 function openMenu(){
   $('#menu').collapse('hide');
 }
 
 
 
-// $(function() {
-//   $("#update").click(function(){
-  
-//   var myLatlng = new google.maps.LatLng(42.3354,-83.0428) 
-//   var marker = new google.maps.Marker({
-//       position: myLatlng,
-//       map: map,
-//       title: 'Josh is here'
-//   });
- 
-// google.maps.event.addDomListener(window, 'load', initialize);
-//   });
 
-// });
-
-
-// function findUsers() {
-//   var name = $("#name").val();
-//   currentUser = new User(name);
-// }
 
 
