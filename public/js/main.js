@@ -78,7 +78,6 @@ function postUserData() {
   var name = $("#name").val();
   var studying = $("#studying").val();
   currentUser = new User(name, 100, studying);
-
   $.ajax({
     type: "POST",
     url: "http://localhost:3000/data/post/user",
@@ -90,13 +89,12 @@ function postUserData() {
     error:function(){
     }
   });
-  
-  //findBuddies();
 }
 
-function User(name, location, studying) {
+function User(name, lat, lng, studying) {
   this.name = name;
-  this.location = location;
+  this.lat = lat;
+  this.lng = lng;
   this.studying = studying;
 
   return this;
@@ -108,13 +106,10 @@ function addBuddy(){
   //add new buddy!
 }
 
-function findBuddies() {
-  $.get("http://localhost:3000/map",function(data,status){
-    console.log(data)
-  });
-
+function findBuddies(currentUser) {
 	// pull up existing map
-  //window.open("map.html","_self");
+  currentUser = currentUser;
+  window.open("map.html","_self");
 }
 
 
