@@ -11,6 +11,11 @@
 	float:right;
 }
 
+#find:hover{
+	background-color: #29AF84;
+	color: white;
+}
+
 #home-image:hover {
 	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/iconsmile.png?raw=true");
 }
@@ -24,7 +29,6 @@
 
 #pageTitle {
 	font-size: 40px;
-
 	text-align: center;
 }
 
@@ -46,13 +50,14 @@
 }
 
 .buddies {
-	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/buddies.png?raw=true");
+	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/buddy-hover.png?raw=true");
 	width: 400px;
 	height:300px;
+	display:block;
 }
 
 .buddies:hover {
-	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/buddy-hover.png?raw=true");
+	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/buddies.png?raw=true");
 	border: 3px;
 }
 
