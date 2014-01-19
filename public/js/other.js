@@ -5,3 +5,7 @@ $(document).ready(function(){
 
 });
   
+function replaceSubject(subject){
+  var subject = subject;
+  $("#studying").update(subject);
+}

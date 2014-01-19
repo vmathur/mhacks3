@@ -117,9 +117,7 @@ function findBuddies() {
   //window.open("map.html","_self");
 }
 
-function openMenu(){
-  $('#menu').collapse('hide');
-}
+
 
 
 
