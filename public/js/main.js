@@ -12,19 +12,20 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-  getUserStudying('biology', function(data){
-      console.log(data);; 
+  getUserStudying('Biology', function(data){
+      console.log(data);;
        for (var i = 0; i<data.length;i++){
-          var longu = data[i].location.long + 0.01*i;
-          var lati = data[i].location.lat + 0.01*i;
-          var studentname = data[i].username;
-          createMarker(42.3454,-83.1428, "testing");
+          // var longu = data[i].location.long + 0.01*i;
+          // var lati = data[i].location.lat + 0.01*i;
+          // var studentname = data[i].username;
           //createMarker(lati,longu, studentname);
       }
   });
 
   getLocation();
   createMarker(42.3354,-83.0428, "Bob is here");
+
+  console.log(currentUser.studying);
  }
 
 google.maps.event.addDomListener(window, 'load', initialize);
