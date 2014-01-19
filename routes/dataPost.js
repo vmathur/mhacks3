@@ -4,7 +4,8 @@ exports.addUser = function(db) {
 
          var data = req.body;
          console.log(data.username);
-         console.log(data.location);
+         console.log(data.longitude);
+         console.log(data.latitude);
          console.log(data.studying);
 
          res.send('thnx :)')
