@@ -13,7 +13,7 @@ exports.getUserWith = function(db) {
     	var collection = db.get('user');
 
     	collection.find({studying: topic},function(e,docs){
-    		res.send('data',docs)
+    		res.send(docs);
     	});
     };
 };

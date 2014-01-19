@@ -12,13 +12,14 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-  getUserStudying('Science', function(data){
-      for (var i = 0; i<data.length;i++){
-          var longu = data[i].location.long - 83.0458 + i;
-          var lati = data[i].location.lat + 42.3384 +i;
+  getUserStudying('biology', function(data){
+      console.log(data);; 
+       for (var i = 0; i<data.length;i++){
+          var longu = data[i].location.long + 0.01*i;
+          var lati = data[i].location.lat + 0.01*i;
           var studentname = data[i].username;
-
-          createMarker(lati,longu, studentname);
+          createMarker(42.3454,-83.1428, "testing");
+          //createMarker(lati,longu, studentname);
       }
   });
 
@@ -77,7 +78,7 @@ function createMarker (lat, lng, Message) {
 function postUserData() {
   var name = $("#name").val();
   var studying = $("#studying").val();
-  currentUser = new User(name, 100, 200, studying);
+  currentUser = new User(name, 42.3384, -83.0458, studying);
   $.ajax({
     type: "POST",
     url: "http://localhost:3000/data/post/user",
