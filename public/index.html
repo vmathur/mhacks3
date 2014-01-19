@@ -10,7 +10,7 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Scripts --> 
     <script type="text/javascript" src = "js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src = "js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src = "js/jquery.easydropdown.min.js "></script>
     <script type="text/javascript" src = "js/main.js"></script>
     <script type="text/javascript" src = "js/bootstrap.js"></script> 
     <script type="text/javascript" src = "js/other.js"></script>   
@@ -29,10 +29,10 @@
 
   <div id="userInput">
     <table border="0" align="center"><tr>
-    <td align="right"><form name="input" method="post" action="/post/user">
+    <td align="right"><form name="input" method="post" action="/post/user" style="font-size:20px; padding-right:5px">
       My name is: </td><td><input type="text" class="form-control" id="name" placeholder="username"></td></tr>
 
-      <tr><td align="right">Studying: </td><td>
+      <tr><td align="right" style="font-size:20px;padding-right:5px">Studying: </td><td>
 
   <select class="dropdown" id="studying">
     <option value="default">Change Subject</option>
@@ -46,7 +46,11 @@
   </select>
 </td></tr></table>
 <br></br>
-      <div class="btn-group"><button type="button" class="btn-default" id="study" onclick="postUserData();">Find a Buddy</button></div>
+      <div class="btn-group">
+        <div class="btn-default" id="study" onclick="postUserData();">Find a Buddy
+          <img class="buddies"></img>
+        </div>
+      </div>
 
     </form></div>
 

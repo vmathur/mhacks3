@@ -109,8 +109,8 @@ function addBuddy(){
 
 function findBuddies(currentUser) {
 	// pull up existing map
-  currentUser = currentUser;
   window.open("map.html","_self");
+  currentUser = currentUser;
 }
 
 function changeSubject() {
