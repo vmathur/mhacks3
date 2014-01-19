@@ -85,6 +85,7 @@ function postUserData() {
     data: { 'username' : currentUser.name, 'longitude' : currentUser.lng, 'latitude' : currentUser.lat, 'studying' : currentUser.studying},
     success: function(result) {
        console.log(result);
+       findBuddies(currentUser);
     }
   });
 }
@@ -108,6 +109,10 @@ function findBuddies(currentUser) {
 	// pull up existing map
   currentUser = currentUser;
   window.open("map.html","_self");
+}
+
+function changeSubject() {
+  window.open("index.html","_self");
 }
 
 
