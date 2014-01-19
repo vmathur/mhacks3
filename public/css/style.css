@@ -30,6 +30,10 @@
 #pageTitle {
 	font-size: 40px;
 	text-align: center;
+	background-color: #29AF84;
+	color: white;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 
 #userInput, #studyingInput, #findInput{
@@ -82,10 +86,21 @@ html, body {
 	font-weight: 200;
       }
 
+#changeSubject{
+	float:right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#status{
+	text-align: center;
+	vertical-align: :center;
+}
+
 #map-canvas {
 	float:left;
     	height: 500px;
-	width:50%;
+	width:100%;
    	margin: 0px;
     	padding: 0px
       }

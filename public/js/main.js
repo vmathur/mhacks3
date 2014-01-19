@@ -36,10 +36,10 @@ $(function() {
   });
 });
  
-function replaceSubject(subject){
-  var subject = subject;
-  $("#studying").update(subject);
-}
+// function replaceSubject(subject){
+//   var subject = subject;
+//   $("#studying").update(subject);
+// }
 
 function getUserStudying(studying, callback){
   $.get("http://localhost:3000/data/get/getUserWith/"+studying,function(data,status){

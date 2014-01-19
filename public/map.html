@@ -20,23 +20,17 @@
       <a class="navbar-brand" href="index.html" id="homebtn"><img src="https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true width"="25px" height="25px"></a>
       <a class="navbar-brand" href="index.html" id="homebtn">Buddy Up</a>
 
-      <a class="navbar-brand" id="menuButton" float="left" onclick="openMenu();"><img src="https://github.com/vmathur/mhacks3/blob/master/public/images/menu.jpg?raw=true" width="25px" height="25px"></a>
+      <button type="button" class="btn btn-default" id="changeSubject" onclick="changeSubject();">Change Subject</button>
 </nav>
 
+<div id="status">default status<br /></div>
  <!-- map -->
 <div id="map-canvas"></div>   
-
-<!-- side menu -->
-<div id="menu"><div class="btn-group-vertical" style="width:100%">
-  <button type="button" class="btn btn-default">Add Foursquare Friends</button>
-  <button type="button" class="btn btn-default" onclick="changeSubject();">Change Subject</button>
-  <button type="button" class="btn btn-default">Leave</button>
-</div></div>
-
-
-
   
-
+<script>
+      var status = "Currently studying " + User.studying;
+      document.getElementById('status').innerHTML = status;
+      </script>
   
   </body>
 </html>
