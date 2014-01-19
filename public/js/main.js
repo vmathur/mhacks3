@@ -17,11 +17,11 @@ function initialize() {
         getUserStudying(res[res.length-1].studying, function(data){
           console.log(data);
           for (var i = 0; i<data.length;i++){
-            var longu = parseInt(data[i].location.long) + 0.1*Math.random();
-            var lati = parseInt(data[i].location.lat) + 0.1* Math.random();
+            var longu = parseInt(data[i].location.long) + 0.1*Math.random() -0.1;
+            var lati = parseInt(data[i].location.lat) + 0.1*Math.random()*0.1 + 0.33;
             var studentname = data[i].username;
             var isStudying = data[i].studying;
-            console.log(longu+'  '+lati);
+            console.log(lati+'  '+longu);
             createMarker(lati,longu, studentname);
             addToList(studentname, isStudying);
           }
@@ -74,6 +74,7 @@ function getLocation() {
 function showPosition(position) {
   var myLat = position.coords.latitude;
   var myLong = position.coords.longitude; 
+  console.log('i am here '+myLat +' '+myLong)
   createMarker(myLat, myLong, "You are here");
 }
 
