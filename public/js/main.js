@@ -20,8 +20,10 @@ function initialize() {
             var longu = parseInt(data[i].location.long) + 0.1*Math.random();
             var lati = parseInt(data[i].location.lat) + 0.1* Math.random();
             var studentname = data[i].username;
+            var isStudying = data[i].studying;
             console.log(longu+'  '+lati);
             createMarker(lati,longu, studentname);
+            addToList(studentname, isStudying);
           }
     });
   });
@@ -45,6 +47,14 @@ function getUserStudying(studying, callback){
   $.get("http://localhost:3000/data/get/getUserWith/"+studying,function(data,status){
     callback(data);
   });
+}
+
+function addToList(studentname, isStudying) {
+  var studentname = studentname;
+  var isStudying = isStudying;
+  var menu = $("#menu");
+  menu.append("<div class='btn btn-default studyList'></div>")
+  $('.studyList:last').append(studentname + ' is currently studying ' + isStudying)
 }
 
 function getUserData(callback){
