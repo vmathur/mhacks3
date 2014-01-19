@@ -45,6 +45,12 @@
 	text-align: center;
 }
 
+.buddies {
+	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/buddies.png?raw=true");
+	width: 500px;
+	height:500px;
+}
+
 .buttons {
 	width: 15%;
 	margin:auto;
