@@ -4,6 +4,7 @@
     <title>Buddy Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- Scripts --> 
@@ -21,14 +22,34 @@
   <div id="home-image"></div>
   <div id="userInput">
     <form name="input" method="post" action="/post/user">
-      Name: <input type="text" id="name" placeholder="username"></br>
-      What are you studying? <input type='text' id='studying' placeholder="e.g. Math"></br>
-      <input type="button" id= "study" value="Find a Buddy" onclick=postUserData();>
+      Name: <input type="text" class="form-control" id="name" placeholder="username"></br>
+
+      What are you studying? <!-- <input type='text' class="form-control" id='studying' placeholder="e.g. Math"></br> -->
+
+      <div class="btn-group">
+  <button type="button" class="btn btn-default" id="studying">Select Subject</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a onclick="replaceSubject('Accounting');">Accounting</a></li>
+    <li><a onclick="replaceSubject('Applied Heath Science');">Applied Heath Science</a></li>
+    <li><a onclick="replaceSubject('Biology');">Biology</a></li>
+    <li><a onclick="replaceSubject('Computer Science');">Computer Science</a></li>
+    <li><a onclick="replaceSubject('Economics');">Economics</a></li>
+    <li><a onclick="replaceSubject('Janitorial Engineering');">Janitorial Engineering</a></li>
+    <li><a onclick="replaceSubject('Math');">Math</a></li>
+    <li><a onclick="replaceSubject('Systems Design Engineering');">Systems Design Engineering</a></li>
+  </ul>
+</div>
+<br></br>
+      <div class="btn-group"><button type="button" class="btn-default" id="study" onclick="postUserData();">Find a Buddy</button></div>
 
     </form></div>
 
 </div>
-    <br></br>
+    
 
   
   </body>
