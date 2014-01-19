@@ -7,12 +7,9 @@
 
 }
 
-#home-image2 {
+#home-image:hover {
 	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/iconsmile.png?raw=true");
-	margin-left: auto; 
-	margin-right: auto; 
-	width:88px; 
-	height:80px;
+{
 
 }
 
