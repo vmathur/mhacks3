@@ -82,16 +82,13 @@ function postUserData() {
   $.ajax({
     type: "POST",
     url: "http://localhost:3000/data/post/user",
-    dataType: 'json',
+    //dataType: 'json',
     data: { 'username' : currentUser.name, 'location' : currentUser.location, 'studying' : currentUser.studying},
-    success: function(result) {
-       console.log(result);
-    },
-    error:function(){
+    complete: function(result) {
+      console.log('hi'); 
+      findBuddies(currentUser); 
     }
   });
-  
-  //findBuddies();
 }
 
 function User(name, location, studying) {
@@ -108,16 +105,16 @@ function addBuddy(){
   //add new buddy!
 }
 
-function findBuddies() {
-  $.get("http://localhost:3000/map",function(data,status){
-    console.log(data)
-  });
-
+function findBuddies(user) {
+  currentUser = user;
+  window.open("map.html","_self");
 	// pull up existing map
   //window.open("map.html","_self");
 }
 
-
+function openMenu(){
+  $('#menu').collapse('hide');
+}
 
 
 
