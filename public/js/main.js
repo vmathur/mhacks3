@@ -112,9 +112,7 @@ function findBuddies(currentUser) {
   window.open("map.html","_self");
 }
 
-function openMenu(){
-  $('#menu').collapse('hide');
-}
+
 
 
 
