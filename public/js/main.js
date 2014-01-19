@@ -112,6 +112,10 @@ function findBuddies(currentUser) {
   window.open("map.html","_self");
 }
 
+function changeSubject() {
+  window.open("index.html","_self");
+}
+
 
 
 
