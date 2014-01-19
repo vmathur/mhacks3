@@ -28,7 +28,7 @@ app.get('/map',routes.map);
 app.get('/update', handle.update);
 
 app.get('/data/get/getUserWith/:stuff', dataGet.getUserWith(db));
-app.get('/data/get/user', dataGet.getUser(db));
+app.get('/data/get/getUser', dataGet.getUser(db));
 app.post('/data/post/user', dataPost.addUser(db));
 
 app.listen(3000);
