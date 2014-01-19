@@ -10,6 +10,11 @@
 	float: right;
 }
 
+#menu{
+	float:right;
+	width:50%;
+}
+
 h1 { 
 	text-align: center;
 }
