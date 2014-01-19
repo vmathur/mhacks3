@@ -47,8 +47,12 @@
 
 .buddies {
 	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/buddies.png?raw=true");
-	width: 500px;
-	height:500px;
+	width: 400px;
+	height:300px;
+}
+
+.buddies:hover {
+	border: 3px;
 }
 
 .buttons {
@@ -59,8 +63,6 @@
 }
 
 .btn-group {
-	width: 50px;
-	height: 50px;
 	border-radius: 50%;
 	color: #29AF84;
 }
