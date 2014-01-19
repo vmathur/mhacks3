@@ -4,6 +4,16 @@
 	margin-right: auto; 
 	width:88px; 
 	height:80px;
+
+}
+
+#home-image2 {
+	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/iconsmile.png?raw=true");
+	margin-left: auto; 
+	margin-right: auto; 
+	width:88px; 
+	height:80px;
+
 }
 
 #menuButton {
