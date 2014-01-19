@@ -1,5 +1,5 @@
 #home-image {
-	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true");
+	/*background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true");*/
 	margin-left: auto; 
 	margin-right: auto; 
 	width:88px; 
@@ -23,6 +23,11 @@ h1 {
 	margin-top:-36px;
 }
 
+#name, #studying {
+	width: 150px;
+	line-height:34x;
+}
+
 .buttons {
 	width: 15%;
 	margin:auto;
@@ -40,6 +45,6 @@ html, body {
 
 #map-canvas {
     height: 500px;
-    margin: 200px;
+    margin: 20px;
     padding: 0px
       }
