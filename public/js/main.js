@@ -12,6 +12,16 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
+  getUserStudying('Science', function(data){
+      for (var i = 0; i<data.length;i++){
+          var longu = data[i].location.long - 83.0458 + i;
+          var lati = data[i].location.lat + 42.3384 +i;
+          var studentname = data[i].username;
+
+          createMarker(lati,longu, studentname);
+      }
+  });
+
   getLocation();
   createMarker(42.3354,-83.0428, "Bob is here");
  }
@@ -21,10 +31,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 $(function() {
   $("#home-image").click(function(){
-    getUserStudying('Science', function(data){
-      //do something meaningul with data
-      console.log(data);
-    });
   });
 });
  
