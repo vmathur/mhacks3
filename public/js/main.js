@@ -17,8 +17,8 @@ function initialize() {
         getUserStudying(res[res.length-1].studying, function(data){
           console.log(data);
           for (var i = 0; i<data.length;i++){
-            var longu = parseInt(data[i].location.long) + 0.1*i;
-            var lati = parseInt(data[i].location.lat) + 0.1*i;
+            var longu = parseInt(data[i].location.long) + 0.1*Math.random();
+            var lati = parseInt(data[i].location.lat) + 0.1* Math.random();
             var studentname = data[i].username;
             console.log(longu+'  '+lati);
             createMarker(lati,longu, studentname);
