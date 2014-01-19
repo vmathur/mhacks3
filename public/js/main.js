@@ -66,22 +66,23 @@ function createMarker (lat, lng, Message) {
 function postUserData() {
   var name = $("#name").val();
   var studying = $("#studying").val();
-  currentUser = new User(name, 0, studying);
+  currentUser = new User(name, 0, 0, studying);
 
   $.ajax({
     type: "POST",
     url: "http://localhost:3000/data/post/user",
     dataType: 'json',
     data: { 'user' : currentUser},
-    success: function(data) { console.log(data) }
+    success: function(data) { console.log(data.name) }
   });
   
-  findBuddies();
+  findBuddies(currentUser);
 }
 
-function User(name, location, studying) {
+function User(name, lat, lng, studying) {
   this.name = name;
-  this.location = location;
+  this.lat = lat;
+  this.lng = lng;
   this.studying = studying;
 
   return this;
@@ -93,8 +94,9 @@ function addBuddy(){
   //add new buddy!
 }
 
-function findBuddies() {
+function findBuddies(currentUser) {
 	// pull up existing map
+  currentUser = currentUser;
   window.open("map.html","_self");
 }
 
