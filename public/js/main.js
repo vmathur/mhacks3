@@ -77,16 +77,14 @@ function createMarker (lat, lng, Message) {
 function postUserData() {
   var name = $("#name").val();
   var studying = $("#studying").val();
-  currentUser = new User(name, 100, studying);
+  currentUser = new User(name, 100, 200, studying);
   $.ajax({
     type: "POST",
     url: "http://localhost:3000/data/post/user",
-    dataType: 'json',
-    data: { 'username' : currentUser.name, 'location' : currentUser.location, 'studying' : currentUser.studying},
+    //dataType: 'json',
+    data: { 'username' : currentUser.name, 'longitude' : currentUser.lng, 'latitude' : currentUser.lat, 'studying' : currentUser.studying},
     success: function(result) {
        console.log(result);
-    },
-    error:function(){
     }
   });
 }
