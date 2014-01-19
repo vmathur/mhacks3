@@ -29,9 +29,11 @@
 
 <div id="menu"><div class="btn-group-vertical" style="width:100%"></div></div>
   
-<script>
-      var status = "Currently studying " + User.studying;
+<script>      
+  getUserData(function(res){
+      var status = "Currently studying " + res[res.length-1].studying;
       document.getElementById('status').innerHTML = status;
+  });
       </script>
   
   </body>
