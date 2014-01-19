@@ -9,7 +9,8 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Scripts --> 
     <script type="text/javascript" src = "js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src = "js/main.js"></script>  
+    <script type="text/javascript" src = "js/main.js"></script>
+    <script type="text/javascript" src = "js/bootstrap.js"></script>  
     <!-- Google Maps API --> 
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -26,23 +27,24 @@
 
       What are you studying? <!-- <input type='text' class="form-control" id='studying' placeholder="e.g. Math"></br> -->
 
-      <div class="btn-group">
-  <button type="button" class="btn btn-default" id="studying">Select Subject</button>
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a onclick="replaceSubject('Accounting');">Accounting</a></li>
-    <li><a onclick="replaceSubject('Applied Heath Science');">Applied Heath Science</a></li>
-    <li><a onclick="replaceSubject('Biology');">Biology</a></li>
-    <li><a onclick="replaceSubject('Computer Science');">Computer Science</a></li>
-    <li><a onclick="replaceSubject('Economics');">Economics</a></li>
-    <li><a onclick="replaceSubject('Janitorial Engineering');">Janitorial Engineering</a></li>
-    <li><a onclick="replaceSubject('Math');">Math</a></li>
-    <li><a onclick="replaceSubject('Systems Design Engineering');">Systems Design Engineering</a></li>
-  </ul>
-</div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" id="studying">Select Subject</button>
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a onclick="replaceSubject('Accounting');">Accounting</a></li>
+      <li><a onclick="replaceSubject('Applied Heath Science');">Applied Heath Science</a></li>
+      <li><a onclick="replaceSubject('Biology');">Biology</a></li>
+      <li><a onclick="replaceSubject('Computer Science');">Computer Science</a></li>
+      <li><a onclick="replaceSubject('Economics');">Economics</a></li>
+      <li><a onclick="replaceSubject('Janitorial Engineering');">Janitorial Engineering</a></li>
+      <li><a onclick="replaceSubject('Math');">Math</a></li>
+      <li><a onclick="replaceSubject('Systems Design Engineering');">Systems Design Engineering</a></li>
+    </ul>
+  </div>
+
 <br></br>
       <div class="btn-group"><button type="button" class="btn-default" id="study" onclick="postUserData();">Find a Buddy</button></div>
 
