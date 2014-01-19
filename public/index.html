@@ -26,10 +26,11 @@
  <!-- <img align="middle"id="home-image" src="https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true" onmouseover="this.src='https://github.com/vmathur/mhacks3/blob/master/public/images/iconsmile.png?raw=true'"/> -->
 
   <div id="userInput">
-    <form name="input" method="post" action="/post/user">
-      Name: <input type="text" class="form-control" id="name" placeholder="username"></br>
+    <table border="0" align="center"><tr>
+    <td align="right"><form name="input" method="post" action="/post/user">
+      Name: </td><td><input type="text" class="form-control" id="name" placeholder="username"></td></tr>
 
-      What are you studying? <!-- <input type='text' class="form-control" id='studying' placeholder="e.g. Math"></br> -->
+      <tr><td align="right">What are you studying? </td><td>
 
   <div class="btn-group">
     <button type="button" class="btn btn-default" id="studying">Select Subject</button>
@@ -48,7 +49,7 @@
       <li><a onclick="replaceSubject('Systems Design Engineering');">Systems Design Engineering</a></li>
     </ul>
   </div>
-
+</td></tr></table>
 <br></br>
       <div class="btn-group"><button type="button" class="btn-default" id="study" onclick="postUserData();">Find a Buddy</button></div>
 

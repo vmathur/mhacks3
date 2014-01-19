@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 $(document).ready(function(){
   $("#home-image").mouseover(function(){
     $("#home-image").attr("id","home-image2");
@@ -6,6 +8,8 @@ $(document).ready(function(){
 });
   
 function replaceSubject(subject){
-  var subject = subject;
-  $("#studying").update(subject);
+	var newText = subject;
+  document.getElementById("studying").value = newText;
+}
+
 }
