@@ -9,7 +9,7 @@ var dataPost = require('./routes/dataPost');
 var DB_LOCATION = 'localhost:27017';
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk(DB_LOCATION+'/buddyup');
+var db = monk(DB_LOCATION+g'/buddyup');
 
 var app = express();
 
@@ -32,5 +32,5 @@ app.get('/data/get/getUserWith/:stuff', dataGet.getUserWith(db));
 app.get('/data/get/getUser', dataGet.getUser(db));
 app.post('/data/post/user', dataPost.addUser(db));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 console.log('Listening on port 3000');
