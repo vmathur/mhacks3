@@ -1,4 +1,4 @@
-var SERVER = 'localhost:3000';
+var SERVER = 'budyup.herokuapp.com';
 var map;
 
 $( document ).ready(function() {
