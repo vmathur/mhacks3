@@ -9,7 +9,7 @@ var dataPost = require('./routes/dataPost');
 var DB_LOCATION = 'localhost:27017';
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk(DB_LOCATION+g'/buddyup');
+var db = monk(DB_LOCATION+'/buddyup');
 
 var app = express();
 
