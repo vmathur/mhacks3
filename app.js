@@ -6,9 +6,10 @@ var handle  = require('./routes/handle');
 var dataGet  = require('./routes/dataGet');
 var dataPost = require('./routes/dataPost');
 
+var DB_LOCATION = 'localhost:27017';
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/buddyup');
+var db = monk(DB_LOCATION+'/buddyup');
 
 var app = express();
 
