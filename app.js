@@ -6,7 +6,7 @@ var handle  = require('./routes/handle');
 var dataGet  = require('./routes/dataGet');
 var dataPost = require('./routes/dataPost');
 
-var DB_LOCATION = 'localhost:27017';
+var DB_LOCATION = process.env.MONGOHQ_URL||'localhost:27017';
 var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk(DB_LOCATION+'/buddyup');
