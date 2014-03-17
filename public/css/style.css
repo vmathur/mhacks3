@@ -1,3 +1,16 @@
+.header {
+	background-color: #fbcf61;
+	width: 100%;
+	height: 300px;
+	padding: 0;
+}
+
+.container  {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
 #home-image {
 	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true");
 	margin-left: auto; 
@@ -11,8 +24,30 @@
 	float:right;
 }
 
+#itseasy {
+	background-color: #eaeaea;
+	text-align: center;
+	height: 300px;
+	width: 100%;
+	opacity: 0.6;	
+}
+
+#itseasy > h2 {
+	color: #666;
+	font-size: 40px;
+	margin: 0;
+	padding-top: 50px;
+}
+
+#itseasy > p {
+	font-size: 18px;
+	width: 300px;
+	padding-top: 30px;
+	color: #333;
+	margin: auto;
+}
+
 #find:hover{
-	background-color: #29AF84;
 	color: white;
 }
 
@@ -27,18 +62,20 @@
 	height:100%
 }
 
-#pageTitle {
-	font-size: 40px;
+h1 {
+	font-size: 72px;
 	text-align: center;
-	background-color: #29AF84;
 	color: white;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
+	vertical-align: middle;
+	margin: 0;
+	line-height: 300px;
+	text-shadow: 3px 3px 3px #f9b512;
 }
 
 #userInput, #studyingInput, #findInput{
 	text-align: center; 
-	padding: 10px 0px 0px 0px;
+	padding: 50px 0px 0px 0px;
+	height: 300px;
 }
 
 #findInput{
@@ -51,18 +88,6 @@
 	height:54px;
 	font-size: 20px;
 	text-align: center;
-}
-
-.buddies {
-	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/buddy-hover.png?raw=true");
-	width: 400px;
-	height:300px;
-	display:block;
-}
-
-.buddies:hover {
-	background: url("https://github.com/vmathur/mhacks3/blob/master/public/images/buddies.png?raw=true");
-	border: 3px;
 }
 
 .buttons {

@@ -31,7 +31,7 @@
 	width: 400px;
 	cursor: pointer;
 	font-weight: 200;
-	background: #29AF84;
+	background: #00a7ff;
 	padding: 8px 0px 8px;
 	border-radius: 5px;
 	color:  #000;
@@ -46,7 +46,7 @@
 
 .dropdown:hover,
 .dropdown.focus{
-	background: #00C384;
+	background: #00a7ff;
 }
 
 /* CARAT */
@@ -138,12 +138,12 @@
 	width: 60px;
 	
 	border-radius: 0 5px 5px 0;
-	box-shadow: inset -55px 0 25px -20px #29af84;
+	box-shadow: inset -55px 0 25px -20px #00a7ff;
 }
 
 .dropdown:hover .selected::after,
 .dropdown.focus .selected::after{
-	box-shadow: inset -55px 0 25px -20px #00c384;
+	box-shadow: inset -55px 0 25px -20px #00a7ff;
 }
 
 /* DROP DOWN WRAPPER */
@@ -155,16 +155,16 @@
 	right: 0;
 	top: 100%;
 	margin-top: 1px;
-	background: #00C384;
+	background: #0097e6;
 	overflow: hidden;
 	opacity: 0;
-	color: #04724E;
+	color: #fff;
 	
 	border-radius: 5px;
 }
 
 .dropdown:hover div{
-	background: #00C384;
+	background: #0097e6;
 	
 	border-radius: 5px;
 }
@@ -220,7 +220,7 @@
 .dropdown li{
 	list-style: none;
 	padding: 14px 12px;
-	border-bottom: 1px solid #29AF84;
+	border-bottom: 1px solid #00a7ff;
 }
 
 .dropdown li:last-child {
@@ -230,13 +230,13 @@
 /* .focus class is also added on hover */
 
 .dropdown li.focus{
-	background: #00C384;
+	background: #00a7ff;
 	position: relative;
 	z-index: 3;
 	color: #fff;
 }
 
 .dropdown li.active{
-	background: #29AF84;
+	background: #00a7ff;
 	color: #fff;
 }
