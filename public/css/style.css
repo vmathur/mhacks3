@@ -1,5 +1,5 @@
 .header {
-	background-color: #fbcf61;
+	background-color: #00a7ff;
 	width: 100%;
 	height: 300px;
 	padding: 0;
@@ -69,7 +69,7 @@ h1 {
 	vertical-align: middle;
 	margin: 0;
 	line-height: 300px;
-	text-shadow: 3px 3px 3px #f9b512;
+	text-shadow: 3px 3px 3px black;
 }
 
 #userInput, #studyingInput, #findInput{
@@ -83,7 +83,7 @@ h1 {
 }
 
 .form-control {
-	color: #29AF84;
+	color: #00a7ff;
 	width: 400px;
 	height:54px;
 	font-size: 20px;
@@ -133,3 +133,9 @@ html, body {
    	margin: 0px;
     	padding: 0px
       }
+
+.navbar-default{
+background-color: #00a7ff;
+border-color: black;
+
+}
