@@ -5,8 +5,9 @@ $( document ).ready(function() {
 
 function initialize() {
   var mapOptions = {
-    zoom: 14,
-    center: new google.maps.LatLng(42.3314, -83.0458)
+    zoom: 8,
+    center: new google.maps.LatLng(43.7000, -79.4000)
+    /*center: new google.maps.LatLng(myLat, myLong)*/
   };
   
   map = new google.maps.Map(document.getElementById('map-canvas'),
