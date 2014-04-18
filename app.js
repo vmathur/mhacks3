@@ -35,6 +35,8 @@ app.get('/map',routes.map);
 app.get('/update', handle.update);
 
 MongoClient.connect(DB_LOCATION, function(err, db) {
+	console.log('connected to db')
+	console.log(db)
 	app.get('/data/get/getUserWith/:stuff', dataGet.getUserWith(db));
 	app.get('/data/get/getUser', dataGet.getUser(db));
 	app.post('/data/post/user', dataPost.addUser(db));

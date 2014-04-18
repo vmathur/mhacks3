@@ -1,6 +1,6 @@
 exports.addUser = function(db) {
     return function(req, res) {
-        
+         console.log(db)
          var data = req.body;
          console.log(data.username);
          console.log(data.longitude);
