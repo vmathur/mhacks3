@@ -16,14 +16,23 @@
    </head>
   <body>
   
-<nav class="map-page-banner navbar-default" role="navigation">
-      <a class="navbar-brand" href="index.html" id="homebtn"><img src="https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true width"="25px" height="25px"></a>
-      <a class="navbar-brand" href="index.html" id="homebtn">Buddy Up</a>
 
-      <button type="button" class="btn btn-default" id="changeSubject" onclick="changeSubject();">Change Subject</button>
+<nav class="map-page-banner navbar-default" role="navigation">
+      <!-- <a class="navbar-brand" href="index.html" id="homebtn"><img src="https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true width"="25px" height="25px"></a> -->
+      <a class="navbar-brand" href="index.html" id="homebtn" style="color:black"><h1 style="line-height:0px; font-size:20px; position:relative; top:8px;">Buddy Up</h1></a>
+
+     <!--  <button type="button" class="btn btn-default" id="changeSubject" onclick="changeSubject();">Change Subject</button> -->
+
+      <ul class="nav navbar-nav navbar-right" style="padding-right:10px;">
+        <div class="btn-group" onclick="postUserData();">
+        <button type="button" class="btn btn-default" id="changeSubject" onclick="changeSubject();"> Change Subject</button>
+      </div>
+      </ul>
+
+      
 </nav>
 
-<div id="status">default status<br /></div>
+<!-- <div id="status">default status<br /></div> -->
  <!-- map -->
 <div id="map-canvas"></div>   
 

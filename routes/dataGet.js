@@ -1,5 +1,6 @@
 exports.getUser = function(db) {
     return function(req, res) {
+        console.log('db:getUser')
         var collection = db.get('user');
     	collection.find({},{},function(e,docs){
     	 	res.send(docs);
@@ -9,6 +10,7 @@ exports.getUser = function(db) {
 
 exports.getUserWith = function(db) {
     return function(req, res) {
+        console.log('db:getUserWith')
     	var topic = req.params.stuff;
     	var collection = db.get('user');
 
