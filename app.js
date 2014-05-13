@@ -8,13 +8,16 @@ var dataPost = require('./routes/dataPost');
 
 var DB_LOCATION = process.env.MONGOHQ_URL||'localhost:27017';
 
-
 console.log('using db: '+DB_LOCATION);
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk(DB_LOCATION);
+var db;
 
-var MongoClient = mongo.MongoClient;
+if(process.env.MONGOHQ_URL){
+	db = monk(DB_LOCATION);
+}else{
+	db = DB_LOCATION;
+}
 
 var app = express();
 
