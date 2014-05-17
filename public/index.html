@@ -16,46 +16,55 @@
     <!-- Google Maps API --> 
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
    </head>
   <body>
 
-<div class="container" id="main">
-  <div class="header"> 
-    <h1> Buddy Up </h1>
+<div class='container'>
+  <div class='login-box'>
+    <img id='logo' src="images/buddy-up-logo-square.png" width='150' align='center'></img>
+    <h1>buddy up</h1>
+    <h4>find a study buddy with ease</h4>
+    <div id="userInput">
+      <table border="0" align='center'>
+        <form name="input" method="post" action="/post/user" style="font-size:20px; padding-right:5px">
+        <tr>
+          <td>
+            <input type="text" class="form-control" id="name" placeholder="username">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <select class="dropdown form-control" id="studying">
+              <option value="General">Subject</option>
+              <option value="Accounting">Accounting</option>
+              <option value="Applied Health Science">Applied Heath Science</option>
+              <option value="Biology">Biology</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Economics">Economics</option>
+              <option value="Math">Math</option>
+              <option value="Physics">Physics</option>
+              <option value="Systems Design Engineering">Systems Design Engineering</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="btn-group" onclick="postUserData();">
+              <button type="button" class="btn btn-default" id="find"> Find a Buddy 
+              </button>
+            </div>
+          </td>
+        </tr>
+        </form>
+      </table>
+      <br />
+    </div>
   </div>
-
-  <div id="itseasy">
-    <h2>It's Easy to Find A Study Buddy</h2>
-    <p>Enter your name and what you're studying, to find people nearby that you can study with. Allow us to access your current location to see who's closest.</p>
-   </div> 
-
- <!-- <img align="middle"id="home-image" src="https://github.com/vmathur/mhacks3/blob/master/public/images/icon.png?raw=true" onmouseover="this.src='https://github.com/vmathur/mhacks3/blob/master/public/images/iconsmile.png?raw=true'"/> -->
-
-  <div id="userInput">
-    <table border="0" align="center"><tr>
-    <td align="right"><form name="input" method="post" action="/post/user" style="font-size:20px; padding-right:5px">
-      My name is: </td><td><input type="text" class="form-control" id="name" placeholder="username"></td></tr>
-
-      <tr><td align="right" style="font-size:20px;padding-right:5px">Studying: </td><td>
-
-  <select class="dropdown" id="studying">
-    <option value="default">Change Subject</option>
-    <option value="Accounting">Accounting</option>
-    <option value="Applied Health Science">Applied Heath Science</option>
-    <option value="Biology">Biology</option>
-    <option value="Computer Science">Computer Science</option>
-    <option value="Economics">Economics</option>
-    <option value="Janitorial Engineering">Janitorial Engineering</option>
-    <option value="Systems Design Engineering">Systems Design Engineering</option>
-  </select>
-</td></tr></table><br />
-      <div class="btn-group" onclick="postUserData();">
-        <button type="button" class="btn btn-default" id="find" style="width:100%;font-size:26px;display:inline"> Find a Buddy </button>
-      </div>
-    </form></div>
-
 </div>
+
     
 
   

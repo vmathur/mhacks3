@@ -27,13 +27,13 @@
 /* WRAPPER */
 
 .dropdown{
-	position: relative;
-	width: 400px;
+	position: relative;	
+	width: 300px;
+	height: 50px;
 	cursor: pointer;
-	font-weight: 200;
-	background: #00a7ff;
+	font-weight: 600;
+	background-color: rgba(255,255,255,0.4);
 	padding: 8px 0px 8px;
-	border-radius: 5px;
 	color:  #000;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -46,7 +46,6 @@
 
 .dropdown:hover,
 .dropdown.focus{
-	background: #00a7ff;
 }
 
 /* CARAT */
@@ -112,16 +111,10 @@
 	opacity: 0;
 }
 
-/* SELECTED FEEDBACK ITEM */ 
-.dropdown .selected {
-    color: #FFF;
-}
-
 .dropdown .selected,
 .dropdown li{
 	display: block;
-	font-size: 20px;
-	font-weight: 400;
+	font-weight: 200;
 	text-transform: uppercase;
 	line-height: 1;
 	padding: 8px 12px;
@@ -138,12 +131,10 @@
 	width: 60px;
 	
 	border-radius: 0 5px 5px 0;
-	box-shadow: inset -55px 0 25px -20px #00a7ff;
 }
 
 .dropdown:hover .selected::after,
 .dropdown.focus .selected::after{
-	box-shadow: inset -55px 0 25px -20px #00a7ff;
 }
 
 /* DROP DOWN WRAPPER */
@@ -155,18 +146,13 @@
 	right: 0;
 	top: 100%;
 	margin-top: 1px;
-	background: #0097e6;
 	overflow: hidden;
 	opacity: 0;
-	color: #fff;
-	
-	border-radius: 5px;
+	color: #333;
 }
 
 .dropdown:hover div{
-	background: #0097e6;
-	
-	border-radius: 5px;
+	background: #666;
 }
 
 /* Height is adjusted by JS on open */
@@ -186,11 +172,9 @@
 	bottom: 0;
 	height: 50px;
 	
-	box-shadow: inset 0 -50px 30px -35px #00c384;
 }
 
 .dropdown.scrollable:hover div::after{
-	box-shadow: inset 0 -50px 30px -35px #00c384;
 }
 
 .dropdown.scrollable.bottom div::after{
@@ -200,6 +184,8 @@
 /* DROP DOWN LIST */
 
 .dropdown ul{
+	background-color: rgba(255,255,255,0.9);
+	color: #333;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -220,7 +206,6 @@
 .dropdown li{
 	list-style: none;
 	padding: 14px 12px;
-	border-bottom: 1px solid #00a7ff;
 }
 
 .dropdown li:last-child {
@@ -230,13 +215,8 @@
 /* .focus class is also added on hover */
 
 .dropdown li.focus{
-	background: #00a7ff;
+	background-color: rgba(186,168,153,0.5);
 	position: relative;
 	z-index: 3;
-	color: #fff;
-}
-
-.dropdown li.active{
-	background: #00a7ff;
 	color: #fff;
 }

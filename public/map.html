@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/maps.css" rel="stylesheet">
     <!-- Scripts --> 
     <script type="text/javascript" src = "js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src = "js/main.js"></script>  
@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
    </head>
-  <body>
+  <body class='map-page'> 
   
 
 <nav class="map-page-banner navbar-default" role="navigation">
@@ -37,6 +37,8 @@
 <div id="map-canvas"></div>   
 
 <div id="menu"><div class="btn-group-vertical" style="width:100%"></div></div>
+
+<footer>An MHacks hackathon project by <a href='http://github.com/whatarthurcodes'>Arthur</a>, <a href='http://github.com/joshuroy'>Josh</a>, <a href='http://github.com/nnoorani'>Noorain</a>, and <a href='http://github.com/vmathur'>Vishal</a></footer>
   
 <script>      
   getUserData(function(res){

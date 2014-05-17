@@ -1,14 +1,47 @@
-.header {
-	background-color: #00a7ff;
+html, body {
 	width: 100%;
-	height: 300px;
-	padding: 0;
+    height: 100%;
+    margin: 0px;
+	font-family: "Roboto Condensed";
+	font-weight: 200;
+	background-color: rgba(186,168,153,0.5);
+}
+
+h1 {
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+h4{
+	text-align: center;
+	font-weight: 300;
 }
 
 .container  {
-	padding: 0;
+	padding: 50px;
 	margin: 0;
+	background: url('../images/72H1.jpg') no-repeat;
+	background-size: cover;
 	width: 100%;
+	height: 100%;
+}
+
+.login-box {
+	display: block;
+	margin: auto;
+	max-width: 400px;
+	min-width: 400px;
+	padding: 25px;
+	background-color: rgba(186,168,153,0.5);
+
+}
+
+#logo {
+	display: table-cell;
+	text-align: center;
+	margin: auto;
 }
 
 #home-image {
@@ -19,36 +52,23 @@
 	height:80px;
 }
 
-
 #menuButton {
 	float:right;
 }
 
-#itseasy {
-	background-color: #eaeaea;
-	text-align: center;
-	height: 300px;
-	width: 100%;
-	opacity: 0.6;	
-}
-
-#itseasy > h2 {
-	color: #666;
-	font-size: 40px;
-	margin: 0;
-	padding-top: 50px;
-}
-
-#itseasy > p {
-	font-size: 18px;
-	width: 300px;
-	padding-top: 30px;
-	color: #333;
-	margin: auto;
+#find {
+	width:300px;
+	height:50px;
+	border-radius:0px;
+	border: 0px;
+	display:inline;
+	background-color: rgb(255,255,255);
+	text-transform: uppercase;
+	color: #000;
 }
 
 #find:hover{
-	color: white;
+	border: 0px;
 }
 
 #home-image:hover {
@@ -59,23 +79,12 @@
 	text-align:left;
 	float:right;
 	width:25%;
-	height:100%
 }
 
-h1 {
-	font-size: 72px;
+#userInput{
+	display: block;
 	text-align: center;
-	color: white;
-	vertical-align: middle;
-	margin: 0;
-	line-height: 300px;
-	text-shadow: 3px 3px 3px black;
-}
-
-#userInput, #studyingInput, #findInput{
 	text-align: center; 
-	padding: 50px 0px 0px 0px;
-	height: 300px;
 }
 
 #findInput{
@@ -83,63 +92,47 @@ h1 {
 }
 
 .form-control {
-	color: #00a7ff;
-	width: 400px;
-	height:54px;
-	font-size: 20px;
+	color: #000;
+	letter-spacing: 2px;
+	background-color: rgba(255,255,255,0.4);
+	border: 0px;
 	text-align: center;
+	margin: 10px 0px;
+	height: 50px;
+	text-transform: uppercase;
+	border-radius: 0px;
 }
 
 .buttons {
-	width: 15%;
+	width: 200px;
 	margin:auto;
 	/*text-align: center;*/
 	padding-top: 10px;
 }
 
 .btn-group {
-	border-radius: 50%;
-	color: #29AF84;
+	border-radius: 0px;
+	border: 0px;
+	margin-top: 40px;
 }
 
-.studyList {
-	width: 100%;
+#find:hover{
+	border: 1px solid #61bdf0;
+	background-color: rgba(255,255,255,0.8)
 }
 
-.map-page-banner{
-	background-color: #00a7ff;
-	min-height: 50px;
-	margin-bottom: 20px;
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #000;
 }
-html, body {
-	width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-	font-family: "HelveticaNeue-Light";
-	font-weight: 200;
-      }
-
-#changeSubject{
-	float:right;
-	margin-top: 7px;
-	margin-right: 14px;
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000;
+    opacity:  1;
 }
-
-#status{
-	text-align: center;
-	vertical-align: :center;
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000;
+    opacity:  1;
 }
-
-#map-canvas {
-	float:left;
-    height: 500px;
-	width:75%;
-   	margin: 0px;
-	padding: 0px
-
-.navbar-default{
-background-color: #00a7ff;
-border-color: black;
-
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #000;
 }
